@@ -1,0 +1,12 @@
+<h1>Incluir nova categoria</h1>
+<hr />
+<?php
+$form = $this->form;
+
+//$form->setAttribute('action', $this->url('application', array('action' => 'novo')))->prepare();
+//echo $this->form()->openTag($form);
+echo '<form action="/application/index/novo" method="post">';
+echo $this->formRow($form->get('title'));
+echo $this->formRow($form->get('description'));
+echo $this->formInput($form->get('submit'));
+echo $this->form()->closeTag($form);
